@@ -181,7 +181,6 @@ void Parser::factor()
 		//Если встретили переменную, то выгружаем значение, лежащее по ее адресу, на вершину стека 
 	}
 	else if (see(T_UNARY)) {
-	  Token operation = scanner_->token();
 	  next();
     mustBe(T_IDENTIFIER);
     int varAddress = findOrAddVariable(scanner_->getStringValue());
